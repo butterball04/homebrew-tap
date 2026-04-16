@@ -5,21 +5,21 @@
 class Mitosis < Formula
   desc "Instant, isolated database branches for development"
   homepage "https://github.com/butterball04/mitosis"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://mitosis-releases.s3.ap-northeast-1.amazonaws.com/v0.1.0/mitosis-darwin-amd64.tar.gz"
-      sha256 "25a97f6544b4ac43ab93f9ff50ed4f8010109f8f9e0f9e759d697cb161335f68"
+      url "https://mitosis-releases.s3.ap-northeast-1.amazonaws.com/v0.2.0/mitosis-darwin-amd64.tar.gz"
+      sha256 "a30503995bd5cd091daa9329305f5a5287106053cc8a03f63eeecc189774bcb6"
 
       define_method(:install) do
         bin.install "mitosis"
       end
     end
     if Hardware::CPU.arm?
-      url "https://mitosis-releases.s3.ap-northeast-1.amazonaws.com/v0.1.0/mitosis-darwin-arm64.tar.gz"
-      sha256 "619f149eb80c7f2f6463ceef7b5ad9d8faeef4d8416307032c7808a0f832c833"
+      url "https://mitosis-releases.s3.ap-northeast-1.amazonaws.com/v0.2.0/mitosis-darwin-arm64.tar.gz"
+      sha256 "183a1b7c3ba4d9099971c411e04e9fa1aa391d114046cb93db9b5cc1b347f3bf"
 
       define_method(:install) do
         bin.install "mitosis"
@@ -29,15 +29,15 @@ class Mitosis < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://mitosis-releases.s3.ap-northeast-1.amazonaws.com/v0.1.0/mitosis-linux-amd64.tar.gz"
-      sha256 "d1ccd0ab9d603fc249cd4c524638a91ccfb774e8f0b9be7bdbb3ac93126de634"
+      url "https://mitosis-releases.s3.ap-northeast-1.amazonaws.com/v0.2.0/mitosis-linux-amd64.tar.gz"
+      sha256 "6caa37a930a9754ee44b772a875eaac8c2ad3638a389f7d14b63bb9a50ec3b1f"
       define_method(:install) do
         bin.install "mitosis"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://mitosis-releases.s3.ap-northeast-1.amazonaws.com/v0.1.0/mitosis-linux-arm64.tar.gz"
-      sha256 "f8e48f6ee6c80af59c0a59da1cbceaabaee0769db43f5b8e537e9db8ab24bd03"
+      url "https://mitosis-releases.s3.ap-northeast-1.amazonaws.com/v0.2.0/mitosis-linux-arm64.tar.gz"
+      sha256 "050fb65ab704cf89af5d4cf4af82b6e9a6a5f8b0350381264d137ee8481cca0c"
       define_method(:install) do
         bin.install "mitosis"
       end
